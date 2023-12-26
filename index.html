@@ -15,56 +15,79 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
 
 
 
     <section>
-        <nav>
 
-            <div class="logo">
-                <img src="image/logo pink.png">
+
+
+        <nav id="navbar-example" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img width="40" src="./image/logo pink.png"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#search">search</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#arrivals">Arrivals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#reviews">Reviews</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#libraries">Libraries</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#contact-us">contact-us</a>
+                  </li>
+              </div>
+
+              <li class="nav-item list-unstyled">
+                <a class="nav-link fw-bold fs-8 shadow" aria-current="page" href="./loginRegister.html" id="signOut-btn">SignOut</a>
+              </li>
+              <li class="nav-item list-unstyled">
+                <a class="nav-link fw-bold fs-8 shadow" aria-current="page" href="./loginRegister.html" id="signOut-btn">SignOut</a>
+              </li>
+
             </div>
-
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Featured">Featured</a></li>
-                <li><a href="#Arrivals">Arrivals</a></li>
-                <li><a href="#Reviews">Reviews</a></li>
-                <li><a href="#Blog">libraries</a></li>
-                <li><a href="#Blog">Contact Us</a></li>
-            </ul>
-
-            <div class="social_icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-cart-arrow-down"></i>
-            </div>
-
+        
         </nav>
-        <div class="main">
+
+        <div id="home" class="main mt-2">
 
             <div class="main_tag text-center position-relative">
                 <h1>WELCOME TO<br> <span class="text-white auto-type"></span></h1>
-
+    
                 <!-- <p  class="text-white">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestias <br>atque laborum
                     non fuga ex deserunt. Exercitationem velit ducimus praesentium,<br>obcaecati hic voluptate id
                     tenetur fuga illum quidem omnis? Rerum?
                 </p> -->
                 <a href="#" class="main_btn">Learn More</a>
-
+    
             </div>
-
-
-
+    
+    
+    
         </div>
     </section>
 
+    <!-- home -->
+
     <!-- about -->
-    <div class="about">
+    <div id="about" class="about">
 
         <div class="about-content">
 
@@ -110,13 +133,8 @@
 
 
     </div>
-
-
-
-    <!-- featured book -->
-
-    <div class="featured">
-
+    <!-- search book -->
+    <div id="search" class="featured">
 
 
         <div class="section-header text-center text-light mb-5">
@@ -125,53 +143,44 @@
 
         <div class="container">
 
-            <div class="featured_book_box">
+            
+            
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" onchange="dede()" aria-label="Search">
+
+            <div class="row">
+                <div id="lds-roller" class="lds-roller col-md-12 d-flex h-100 align-items-center justify-content-center d-none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            <div id="featured_book" class="featured_book_box mb-3">
 
 
-                <div class="arrivals_box col-lg-4">
+
+                <!-- <div class="arrivals_box col-lg-4">
 
                     <div class="arrivals_card ">
 
                         <div class="book">
-                            <span>
-                                Author: JD.<br>
-                                Chapters: 12 <br>
-                                Cost: 12$<br>
-
-                                <a href="#book.html" class="about_btn">Learn More</a>
-                            </span>
-
+                            <div class="box d-flex flex-column">
+                                <span>
+                                    Author: JD.<br>
+                                    Chapters: 12 <br>
+                                    Cost: 12$
+                                </span>
+                                <div class="btns d-flex flex-column gap-2">
+                                    <button class="btn btn-primary" onclick="">Add to Cart</button>
+                                    <button class="btn btn-primary" onclick="">Buy Now</button>
+                                </div>
+                            </div>
                             <div class="cover">
-                                <img src="./assets/images/devbook-cover.png">
+                                <img id="imagee" src="">
                             </div>
                         </div>
 
 
 
                     </div>
-                </div>
+                </div> -->
 
-                <div class="arrivals_box col-lg-4">
-
-                    <div class="arrivals_card ">
-
-                        <div class="book">
-                            <span>
-                                Author: JD.<br>
-                                Chapters: 12 <br>
-                                Cost: 12$
-                            </span>
-                            <div class="cover">
-                                <img src="image/arrival21.jpeg">
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-                <div class="arrivals_box col-lg-4">
+                <!-- <div class="arrivals_box col-lg-4">
 
                     <div class="arrivals_card ">
 
@@ -439,7 +448,7 @@
 
 
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -453,11 +462,8 @@
 
     </div>
 
-
-
     <!-- arrivals -->
-
-    <div class="arrivals">
+    <div id="arrivals" class="arrivals">
 
         <div class="section-header text-center text-white">
             <h3 class="mb-5">New Arrivals</h3>
@@ -465,9 +471,31 @@
 
         <div class="container">
 
-            <div class="row">
 
-                <div class="arrivals_box col-md-12 mt-5">
+            <div id="arrivalss" class="row">
+
+
+                <!-- <div class="arrivals_box col-lg-4 py-3">
+
+                    <div class="arrivals_card ">
+
+                        <div class="book">
+                            <span>
+                                Author: JD.<br>
+                                Chapters: 12 <br>
+                                Cost: 12$
+                            </span>
+                            <div class="cover">
+                                <img src="image/arrival_1.jpg" class="w-100">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div> -->
+
+                <!-- <div class="arrivals_box col-md-12 mt-5">
 
                     <div class="arrivals_box col-lg-4">
 
@@ -488,7 +516,6 @@
 
                         </div>
                     </div>
-
 
                     <div class="col-lg-4">
 
@@ -550,13 +577,6 @@
 
                         </div>
                     </div>
-
-
-
-
-                </div>
-                <div class="arrivals_box col-md-12 mt-5 mb-5">
-
                     <div class="col-lg-4">
                         <div class="arrivals_card ">
 
@@ -567,18 +587,15 @@
                                     Cost: 12$
                                 </span>
                                 <div class="cover">
-                                    <img src="image/arrival_4.jpg" class="w-100">
+                                    <img src="image/arrival_5.jpg" class="w-100">
                                 </div>
                             </div>
 
 
 
                         </div>
-
                     </div>
-
                     <div class="col-lg-4">
-
                         <div class="arrivals_card ">
 
                             <div class="book">
@@ -588,7 +605,7 @@
                                     Cost: 12$
                                 </span>
                                 <div class="cover">
-                                    <img src="image/arrival_6.jpg" class="w-100">
+                                    <img src="image/arrival_5.jpg" class="w-100">
                                 </div>
                             </div>
 
@@ -597,61 +614,14 @@
                         </div>
                     </div>
 
+                </div> -->
 
-                    <div class="col-lg-4">
-
-                        <div class="arrivals_card ">
-
-                            <div class="book">
-                                <span>
-                                    Author: JD.<br>
-                                    Chapters: 12 <br>
-                                    Cost: 12$
-                                </span>
-                                <div class="cover">
-                                    <img src="image/arrival_7.jpg" class="w-100">
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4">
-
-                        <div class="arrivals_card ">
-
-                            <div class="book">
-                                <span>
-                                    Author: JD.<br>
-                                    Chapters: 12 <br>
-                                    Cost: 12$
-                                </span>
-                                <div class="cover">
-                                    <img src="image/arrival_8.webp" class="w-100">
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
             </div>
 
         </div>
     </div>
-
     <!-- reviews -->
-
-    <div class="reviews">
+    <div id="reviews" class="reviews">
 
         <div class="section-header text-center text-light pt-5">
             <h3>Reviews</h3>
@@ -735,230 +705,215 @@
 
             </div>
         </div>
+    </div>
+    <!-- libraries -->
+    <div id="libraries" class="libraries mbt-5">
+
+        <div class="section-header text-center text-light mb-5 mt-5 pb-5">
+            <h3>Libraries</h3>
+        </div>
 
 
-        <!-- libraries -->
+        <div class="container">
+            <div class="row gap-4">
 
-        <div class="libraries mbt-5">
-
-            <div class="section-header text-center text-light mb-5 mt-5 pb-5">
-                <h3>Libraries</h3>
-            </div>
+                <div class="col-lg-2">
 
 
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-2 offset-1">
+                    <div class="card">
+                        <div class="card-img1"> </div>
+                        <div class="card-info">
+                            <p class="text-title text-center">Sword Library </p>
+                            <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="text-title">2576 Book </span>
+                            <div class="card-button">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
 
+                <div class="col-lg-2">
 
+                    <div class="container1">
 
                         <div class="card">
-                            <div class="card-img1"> </div>
+                            <div class="card-img2"></div>
                             <div class="card-info">
-                                <p class="text-title text-center">Sword Library </p>
+                                <p class="text-title text-center">System Library </p>
                                 <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
                             </div>
                             <div class="card-footer">
-                                <span class="text-title">2576 Book </span>
+                                <span class="text-title">6976 Book </span>
                                 <div class="card-button">
                                     <i class="fa-solid fa-book"></i>
                                 </div>
                             </div>
                         </div>
 
-
-
-
                     </div>
 
-                    <div class="col-lg-2">
 
-                        <div class="container1">
+                </div>
+                <div class="col-lg-2">
 
-                            <div class="card">
-                                <div class="card-img2"></div>
-                                <div class="card-info">
-                                    <p class="text-title text-center">System Library </p>
-                                    <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
-                                </div>
-                                <div class="card-footer">
-                                    <span class="text-title">6976 Book </span>
-                                    <div class="card-button">
-                                        <i class="fa-solid fa-book"></i>
-                                    </div>
+                    <div class="container1">
+
+                        <div class="card">
+                            <div class="card-img3"></div>
+                            <div class="card-info">
+                                <p class="text-title text-center">Alpha Library </p>
+                                <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="text-title">3456 Book </span>
+                                <div class="card-button">
+                                    <i class="fa-solid fa-book"></i>
                                 </div>
                             </div>
-
                         </div>
-
-
-                    </div>
-                    <div class="col-lg-2">
-
-                        <div class="container1">
-
-                            <div class="card">
-                                <div class="card-img3"></div>
-                                <div class="card-info">
-                                    <p class="text-title text-center">Alpha Library </p>
-                                    <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
-                                </div>
-                                <div class="card-footer">
-                                    <span class="text-title">3456 Book </span>
-                                    <div class="card-button">
-                                        <i class="fa-solid fa-book"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-lg-2">
-
-                        <div class="container1">
-
-                            <div class="card">
-                                <div class="card-img4"></div>
-                                <div class="card-info">
-                                    <p class="text-title text-center">Rocket Library </p>
-                                    <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
-                                </div>
-                                <div class="card-footer">
-                                    <span class="text-title">5050 Book </span>
-                                    <div class="card-button">
-                                        <i class="fa-solid fa-book"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-lg-2">
-
-                        <div class="container1">
-
-                            <div class="card">
-                                <div class="card-img5"></div>
-                                <div class="card-info">
-                                    <p class="text-title text-center">Delux Library </p>
-                                    <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
-                                </div>
-                                <div class="card-footer">
-                                    <span class="text-title">3546 Book </span>
-                                    <div class="card-button">
-                                        <i class="fa-solid fa-book"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
 
                     </div>
 
 
                 </div>
 
+                <div class="col-lg-2">
+
+                    <div class="container1">
+
+                        <div class="card">
+                            <div class="card-img4"></div>
+                            <div class="card-info">
+                                <p class="text-title text-center">Rocket Library </p>
+                                <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="text-title">5050 Book </span>
+                                <div class="card-button">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <div class="container1">
+
+                        <div class="card">
+                            <div class="card-img5"></div>
+                            <div class="card-info">
+                                <p class="text-title text-center">Delux Library </p>
+                                <p class="text-body text-center">Lorem, ipsum dolor sit amet consectetur</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="text-title">3546 Book </span>
+                                <div class="card-button">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
             </div>
-
-
-
-
-
-
-
-
-
-
 
         </div>
 
 
-        <!-- contact-us -->
-
-        <div class="contact-us" id="contact-us">
-            <div class="container">
-                <div class="section-header text-center text-light pt-5 mb-5">
-                    <h3>Contact-Us</h3>
-                </div>
+    </div>
+    <!-- contact-us -->
+    <div class="contact-us" id="contact-us">
+        <div class="container">
+            <div class="section-header text-center text-light pt-5 mb-5">
+                <h3>Contact-Us</h3>
+            </div>
+            <div class="row">
                 <iframe src="https://www.google.com/maps/d/embed?mid=135Cynb8cnEH6rhTs6PEn4999499y_r0&ehbc=2E312F"
-                    width="1310" height="346"></iframe>
+                width="1310" height="346">
+            </iframe>
+            </div>
 
-                <div class="information">
-                    <div class="cont">
-                        <div class="icon">
-                            <i class="fa-regular fa-map"></i>
-                        </div>
-                        <div class="address">
-                            <h3>Our Address</h3>
-                            <p>A108 Adam Street, New York, NY 535022</p>
-                        </div>
+            <div class="information">
+                <div class="cont">
+                    <div class="icon">
+                        <i class="fa-regular fa-map"></i>
                     </div>
-                    <div class="cont">
-                        <div class="icon">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="email">
-                            <h3>Email Us</h3>
-                            <a href="mailto:contact@example.com">contact@example.com </a>
-                        </div>
-                    </div>
-                    <div class="cont">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="phone">
-                            <h3>Call Us</h3>
-                            <a href="tel:+1 5589 55488 55">+1 5589 55488 55 </a>
-                        </div>
-                    </div>
-                    <div class="cont">
-                        <div class="icon">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </div>
-                        <div class="open">
-                            <h3>Opening Hours</h3>
-                            <p>
-                                <strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday</strong> :
-                                Closed
-                            </p>
-                        </div>
+                    <div class="address">
+                        <h3>Our Address</h3>
+                        <p>A108 Adam Street, New York, NY 535022</p>
                     </div>
                 </div>
-                <form>
-                    <div class="input-group my-4 ">
-                        <input type="text" placeholder="Your Name" name="name">
-                        <input type="email" placeholder="Your Email" name="email">
+                <div class="cont">
+                    <div class="icon">
+                        <i class="fa-regular fa-envelope"></i>
                     </div>
-                    <input type="text" placeholder="Subject" name="subject">
-                    <textarea placeholder="Message" name="message"></textarea>
-                    <button class="btn btn-main" type="submit">Send Message</button>
-                </form>
+                    <div class="email">
+                        <h3>Email Us</h3>
+                        <a href="mailto:contact@example.com">contact@example.com </a>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="phone">
+                        <h3>Call Us</h3>
+                        <a href="tel:+1 5589 55488 55">+1 5589 55488 55 </a>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="icon">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="open">
+                        <h3>Opening Hours</h3>
+                        <p>
+                            <strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday</strong> :
+                            Closed
+                        </p>
+                    </div>
+                </div>
             </div>
+            <form>
+                <div class="input-group my-4 ">
+                    <input type="text" placeholder="Your Name" name="name">
+                    <input type="email" placeholder="Your Email" name="email">
+                </div>
+                <input type="text" placeholder="Subject" name="subject">
+                <textarea placeholder="Message" name="message"></textarea>
+                <button class="btn btn-main" type="submit">Send Message</button>
+            </form>
         </div>
+    </div>
 
 
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <script>
-            var typed = new Typed(".auto-type", {
-                strings: [" Book Store", "SERAJ", " Our Online Library", "Community For readers"],
-                typeSpeed: 70,
-                backSpeed: 70,
-                loop: true
-            })
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: [" Book Store", "SERAJ", " Our Online Library", "Community For readers"],
+            typeSpeed: 70,
+            backSpeed: 70,
+            loop: true
+        })
 
-
-        </script>
-        <script src="./js/bootstrap.bundle.min.js">
-        </script>
-
+    </script>
+    <script src="./js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/main.js"></script>
 
 
 </body>

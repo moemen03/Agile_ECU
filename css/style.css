@@ -33,6 +33,9 @@ h3 , h2{
 p{
     color: var(--p) !important;
 }
+.fs-8{
+    font-size: 10px !important;
+}
 
 /* home */
 section{
@@ -44,52 +47,25 @@ section{
 
 }
 
-section nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 0 10px var(--primary-color);
-    background: #fff;
-    position: fixed;
-    left: 0;
-    z-index: 100;
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: 7px;
+    padding-left: 7px
+}
+.navbar-nav .nav-link.active{
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    transition: 0.5s all;
 }
 
-section nav .logo img{
-    width: 60px;
-    cursor: pointer;
-    margin: 8px 0;
-    color:var(--primary-color);
-}
 
-section nav ul{
-    list-style: none;
-}
 
-section nav li{
-    display: inline-block;
-    padding: 0 10px;
-}
 
-section nav li a{
-    text-decoration: none;
-    color: #000;
-}
 
-section nav li a:hover{
-    color: var(--primary-color);
-}
 
-section nav .social_icon i{
-    margin: 0 5px;
-    font-size: 18px;
-}
 
-section nav .social_icon i:hover{
-    color: var(--primary-color);
-    cursor: pointer;
-}
+/* 
+^ hoome
+*/
 section .main{
     display: flex;
     align-items: center;
@@ -274,10 +250,13 @@ section .main .main_tag .main_btn{
     width: 95%;
     height: 60vh;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
     overflow: hidden;
     overflow-x: scroll;
+
+    display: flex;
+    
 }
 
 
@@ -361,11 +340,15 @@ section .main .main_tag .main_btn{
 
 
   .featured .arrivals_box{
-    width: 100%;
+    /* width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 25px 0;
+    grid-gap: 25px 0; */
+
+    /* display: flex;
+    justify-content: center;
+    gap: 5px; */
 }
 
 .featured .arrivals_box .arrivals_card{
@@ -490,19 +473,20 @@ section .main .main_tag .main_btn{
 
 
 .arrivals .arrivals_box{
-    width: 95%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 25px 0;
+    /* width: 95%; */
+    /* margin: 0 auto; */
+
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; */
 }
 
-.arrivals .arrivals_box .arrivals_card{
+.arrivals .arrivals_card{
     width: 250px;
     height: 340px;
     text-align: center;
-    padding: 5px;
-   
+    padding: 15px;
+    padding-top: 25px;
     margin: auto 20px;
 }
 
@@ -968,3 +952,94 @@ textarea{
 .reviews-section h2{
     color: var(--primary-color);    
 }
+
+
+
+/* 
+    ^ Spinner
+*/
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #621d21;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
